@@ -8,6 +8,9 @@
 #include <stack>
 #include <vector>
 #include <cmath> // Para operaciones matemáticas avanzadas como pow
+#include "Framework/ColorManager.h"
+#include "Framework/EventManager.h"
+#include "Framework/FileManager.h"
 
 typedef std::vector<std::string> Tokens;
 

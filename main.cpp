@@ -7,11 +7,7 @@
 #include <sstream>
 #include <stack>
 #include <vector>
-#include <cmath>
-#include "Modules/Module.h"
-#include "Modules/MathModule.h"
-#include "Modules/DBModule.h"
-#include "Modules/ModuleManager.h"
+#include <cmath> // Para operaciones matemáticas avanzadas como pow
 
 typedef std::vector<std::string> Tokens;
 

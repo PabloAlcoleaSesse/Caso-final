@@ -1,5 +1,5 @@
 //
-// Created by esteb on 22/10/2024.
+// Created by esteb on 22/10/2024
 //
 
 // tiny_lisp.cpp
@@ -8,6 +8,7 @@
 #include <stack>
 #include <vector>
 #include <cmath> // Para operaciones matemáticas avanzadas como pow
+#include <limits> // Para valores máximos y mínimos
 
 typedef std::vector<std::string> Tokens;
 
@@ -71,18 +72,22 @@ int evaluate(Tokens& tokens) {
             int b = stack.top();
             stack.pop();
             stack.push(pow(a, b));
-        } else if (token == "min") { // Mínimo
-            int a = stack.top();
-            stack.pop();
-            int b = stack.top();
-            stack.pop();
-            stack.push(std::min(a, b));
-        } else if (token == "max") { // Máximo
-            int a = stack.top();
-            stack.pop();
-            int b = stack.top();
-            stack.pop();
-            stack.push(std::max(a, b));
+        } else if (token == "min") { // Mínimo con múltiples argumentos
+            int min_val = std::numeric_limits<int>::max();
+            while (!tokens.empty() && tokens.back() != "(") {
+                int a = std::stoi(tokens.back());
+                tokens.pop_back();
+                min_val = std::min(min_val, a);
+            }
+            stack.push(min_val);
+        } else if (token == "max") { // Máximo con múltiples argumentos
+            int max_val = std::numeric_limits<int>::min();
+            while (!tokens.empty() && tokens.back() != "(") {
+                int a = std::stoi(tokens.back());
+                tokens.pop_back();
+                max_val = std::max(max_val, a);
+            }
+            stack.push(max_val);
         } else {
             stack.push(std::stoi(token));
         }

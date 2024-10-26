@@ -56,10 +56,10 @@ RM = "C:\Program Files\JetBrains\CLion 2024.2.2\bin\cmake\win\x64\bin\cmake.exe"
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\micha\Desktop\CLion\github\Caso-final
+CMAKE_SOURCE_DIR = C:\Users\pablo\Documents\GITHUB\Caso-final
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\micha\Desktop\CLion\github\Caso-final\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\pablo\Documents\GITHUB\Caso-final\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -86,9 +86,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\micha\Desktop\CLion\github\Caso-final\cmake-build-debug\CMakeFiles C:\Users\micha\Desktop\CLion\github\Caso-final\cmake-build-debug\\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\pablo\Documents\GITHUB\Caso-final\cmake-build-debug\CMakeFiles C:\Users\pablo\Documents\GITHUB\Caso-final\cmake-build-debug\\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\micha\Desktop\CLion\github\Caso-final\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\pablo\Documents\GITHUB\Caso-final\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -128,53 +128,29 @@ Caso_final/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Caso_final.dir\build.make CMakeFiles/Caso_final.dir/build
 .PHONY : Caso_final/fast
 
-Language/main.obj: Language/main.cpp.obj
-.PHONY : Language/main.obj
+tiny_lisp.obj: tiny_lisp.cpp.obj
+.PHONY : tiny_lisp.obj
 
 # target to build an object file
-Language/main.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Caso_final.dir\build.make CMakeFiles/Caso_final.dir/Language/main.cpp.obj
-.PHONY : Language/main.cpp.obj
+tiny_lisp.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Caso_final.dir\build.make CMakeFiles/Caso_final.dir/tiny_lisp.cpp.obj
+.PHONY : tiny_lisp.cpp.obj
 
-Language/main.i: Language/main.cpp.i
-.PHONY : Language/main.i
-
-# target to preprocess a source file
-Language/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Caso_final.dir\build.make CMakeFiles/Caso_final.dir/Language/main.cpp.i
-.PHONY : Language/main.cpp.i
-
-Language/main.s: Language/main.cpp.s
-.PHONY : Language/main.s
-
-# target to generate assembly for a file
-Language/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Caso_final.dir\build.make CMakeFiles/Caso_final.dir/Language/main.cpp.s
-.PHONY : Language/main.cpp.s
-
-main.obj: main.cpp.obj
-.PHONY : main.obj
-
-# target to build an object file
-main.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Caso_final.dir\build.make CMakeFiles/Caso_final.dir/main.cpp.obj
-.PHONY : main.cpp.obj
-
-main.i: main.cpp.i
-.PHONY : main.i
+tiny_lisp.i: tiny_lisp.cpp.i
+.PHONY : tiny_lisp.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Caso_final.dir\build.make CMakeFiles/Caso_final.dir/main.cpp.i
-.PHONY : main.cpp.i
+tiny_lisp.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Caso_final.dir\build.make CMakeFiles/Caso_final.dir/tiny_lisp.cpp.i
+.PHONY : tiny_lisp.cpp.i
 
-main.s: main.cpp.s
-.PHONY : main.s
+tiny_lisp.s: tiny_lisp.cpp.s
+.PHONY : tiny_lisp.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Caso_final.dir\build.make CMakeFiles/Caso_final.dir/main.cpp.s
-.PHONY : main.cpp.s
+tiny_lisp.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Caso_final.dir\build.make CMakeFiles/Caso_final.dir/tiny_lisp.cpp.s
+.PHONY : tiny_lisp.cpp.s
 
 # Help Target
 help:
@@ -185,12 +161,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... Caso_final
-	@echo ... Language/main.obj
-	@echo ... Language/main.i
-	@echo ... Language/main.s
-	@echo ... main.obj
-	@echo ... main.i
-	@echo ... main.s
+	@echo ... tiny_lisp.obj
+	@echo ... tiny_lisp.i
+	@echo ... tiny_lisp.s
 .PHONY : help
 
 

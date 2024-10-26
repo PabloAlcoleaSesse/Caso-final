@@ -1,6 +1,6 @@
 CMakeFiles/Caso_final.dir/Language/main.cpp.obj: \
- C:\Users\micha\Desktop\CLion\github\Caso-final\Language\main.cpp \
- C:\Users\micha\Desktop\CLion\github\Caso-final\Language\type.h \
+ C:\Users\pablo\Documents\GITHUB\Caso-final\Language\main.cpp \
+ C:\Users\pablo\Documents\GITHUB\Caso-final\Language\type.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/iostream \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/requires_hosted.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
@@ -164,8 +164,8 @@ CMakeFiles/Caso_final.dir/Language/main.cpp.obj: \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/atomic_base.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/atomic_lockfree_defines.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward/auto_ptr.h \
- C:\Users\micha\Desktop\CLion\github\Caso-final\Language\parser.h \
- C:\Users\micha\Desktop\CLion\github\Caso-final\Language\environment.h \
+ C:\Users\pablo\Documents\GITHUB\Caso-final\Language\parser.h \
+ C:\Users\pablo\Documents\GITHUB\Caso-final\Language\environment.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/sstream \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/sstream.tcc \
- C:\Users\micha\Desktop\CLion\github\Caso-final\Language\evaluator.h
+ C:\Users\pablo\Documents\GITHUB\Caso-final\Language\evaluator.h

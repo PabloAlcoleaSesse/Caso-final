@@ -1,4 +1,4 @@
-"C:\Program Files\JetBrains\CLion 2024.2.2\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -DCMAKE_C_COMPILER=gcc -DCMAKE_CXX_COMPILER=g++ -G "MinGW Makefiles" -S C:\Users\micha\Desktop\CLion\github\Caso-final -B C:\Users\micha\Desktop\CLion\github\Caso-final\cmake-build-debug
--- Configuring done (0.2s)
--- Generating done (0.0s)
--- Build files have been written to: C:/Users/micha/Desktop/CLion/github/Caso-final/cmake-build-debug
+"C:\Program Files\JetBrains\CLion 2024.2.2\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "MinGW Makefiles" -S C:\Users\pablo\Documents\GitHub\Caso-final -B C:\Users\pablo\Documents\GitHub\Caso-final\cmake-build-debug
+-- Configuring done (0.3s)
+-- Generating done (0.1s)
+-- Build files have been written to: C:/Users/pablo/Documents/GITHUB/Caso-final/cmake-build-debug

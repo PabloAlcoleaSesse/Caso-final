@@ -1,8 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Caso_final.dir/Language/main.cpp.obj"
-  "CMakeFiles/Caso_final.dir/Language/main.cpp.obj.d"
-  "CMakeFiles/Caso_final.dir/main.cpp.obj"
-  "CMakeFiles/Caso_final.dir/main.cpp.obj.d"
+  "CMakeFiles/Caso_final.dir/tiny_lisp.cpp.obj"
+  "CMakeFiles/Caso_final.dir/tiny_lisp.cpp.obj.d"
   "Caso_final.exe"
   "Caso_final.exe.manifest"
   "Caso_final.pdb"

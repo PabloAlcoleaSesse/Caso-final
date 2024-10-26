@@ -8,8 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "C:/Users/micha/Desktop/CLion/github/Caso-final/Language/main.cpp" "CMakeFiles/Caso_final.dir/Language/main.cpp.obj" "gcc" "CMakeFiles/Caso_final.dir/Language/main.cpp.obj.d"
-  "C:/Users/micha/Desktop/CLion/github/Caso-final/main.cpp" "CMakeFiles/Caso_final.dir/main.cpp.obj" "gcc" "CMakeFiles/Caso_final.dir/main.cpp.obj.d"
+  "C:/Users/pablo/Documents/GITHUB/Caso-final/tiny_lisp.cpp" "CMakeFiles/Caso_final.dir/tiny_lisp.cpp.obj" "gcc" "CMakeFiles/Caso_final.dir/tiny_lisp.cpp.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

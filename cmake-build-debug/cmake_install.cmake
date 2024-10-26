@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/micha/Desktop/CLion/github/Caso-final
+# Install script for directory: C:/Users/pablo/Documents/GITHUB/Caso-final
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/micha/Desktop/CLion/github/Caso-final/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/pablo/Documents/GITHUB/Caso-final/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

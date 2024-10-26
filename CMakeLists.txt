@@ -9,4 +9,10 @@ add_executable(Caso_final
         "Language/environment.h"
         "Language/parser.h"
         "Language/evaluator.h"
-        "Language/main.cpp")
+        "Language/main.cpp"
+        Modules/Module.h
+        Modules/MathModule.h
+        Modules/DBModule.h
+        Modules/ModuleManager.h
+        Modules/main.cpp
+)

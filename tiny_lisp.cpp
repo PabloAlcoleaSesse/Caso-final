@@ -11,7 +11,6 @@
 #include <sstream>
 #include <stdexcept>
 #include <cmath> // Para operaciones matemáticas avanzadas como pow
-#include <limits> // Para valores máximos y mínimos
 #include <algorithm>
 #include <unordered_map>
 #include <functional>
@@ -21,7 +20,7 @@ typedef std::vector<std::string> Tokens;
 //Definir variables como un mapa no ordenado de strings y doubles, en ellos se almacenaran las variables y sus valores
 std::unordered_map<std::string, double> variables;
 //Definir funciones como un mapa no ordenado de strings y pares de enteros y funciones, en ellos se almacenaran las funciones y sus argumentos
-std::unordered_map<std::string, std::pair<int, std::function<double(const std::vector<double>&)>>>functions;
+std::unordered_map<std::string, std::pair<double, std::function<double(const std::vector<double>&)>>>functions;
 
 
 //Tokenizar la entrada, convirtiendo el string de entrada en un vector de tokens
@@ -38,7 +37,7 @@ Tokens tokenize(const std::string& input) {
 //Evaluar la expresión dada en notación postfija
 //Utiliza una pila para manejar los operandos y operadores
 double evaluate(Tokens& tokens) {
-    std::stack<int> stack;
+    std::stack<double> stack;
 
     while (!tokens.empty()) {
         std::string token = tokens.front();
@@ -97,14 +96,18 @@ double evaluate(Tokens& tokens) {
             }
             stack.push(a / b);
         }
-        else if (token == "%") { // Módulo
-            if (stack.size() < 2){
-                throw std::runtime_error("Valores insuficientes para realizar el modulo");
+        else if (token == "%") {
+            if (stack.size() < 2) {
+                throw std::runtime_error("Valores insuficientes para devorlver el resto de la divison");
             }
-            double a = stack.top(); stack.pop();
             double b = stack.top(); stack.pop();
+            double a = stack.top(); stack.pop();
+            if (b == 0) {
+                throw std::runtime_error("Division por cero");
+            }
             stack.push(fmod(a, b));
-        } else if (token == "^") { // Potencia
+        }
+        else if (token == "^") { // Potencia
             if (stack.size() < 2){
                 throw std::runtime_error("Valores insuficientes para realizar la potencia");
             }
@@ -121,27 +124,71 @@ double evaluate(Tokens& tokens) {
             stack.push(abs(a));
         }
         //Operadores trigonometricos
+        //Seno
+        else if (token == "sin") {
+            if (stack.size() < 1) {
+                throw std::runtime_error("Operandos insuficientes para el seno");
+            }
+            double a = stack.top(); stack.pop();
+            stack.push(std::sin(a));
+        }
+            //Coseno
+        else if (token == "cos") {
+            if (stack.size() < 1){
+                throw std::runtime_error("Valores insuficientes para realizar el coseno");
+            }
+            double a = stack.top(); stack.pop();
+            stack.push(cos(a));
+        }
+            //Tangente
+        else if (token == "tan") {
+            if (stack.size() < 1){
+                throw std::runtime_error("Valores insuficientes para realizar la tangente");
+            }
+            double a = stack.top(); stack.pop();
+            stack.push(tan(a));
+        }
+            //Cotangente
+        else if (token == "cot") {
+            if (stack.size() < 1){
+                throw std::runtime_error("Valores insuficientes para realizar la cotangente");
+            }
+            double a = stack.top(); stack.pop();
+            stack.push(1/tan(a));
+        }
+            //Secante
+        else if (token == "sec") {
+            if (stack.size() < 1){
+                throw std::runtime_error("Valores insuficientes para realizar la secante");
+            }
+            double a = stack.top(); stack.pop();
+            stack.push(1/cos(a));
+        }
+            //Cosecante
+        else if (token == "csc") {
+            if (stack.size() < 1){
+                throw std::runtime_error("Valores insuficientes para realizar la cosecante");
+            }
+            double a = stack.top(); stack.pop();
+            stack.push(1/sin(a));
+        }
 
         //Operadores logicos
-        else if (token == "min") { // Mínimo con múltiples argumentos
-            if (stack.size() < 2){
-                throw std::runtime_error("Valores insuficientes para realizar el minimo");
+        else if (token == "min") {
+            if (stack.size() < 2) {
+                throw std::runtime_error("Operandos insuficientes para la funcion min");
             }
-            double min_val = std::numeric_limits<double>::max();
-            while (!tokens.empty() && tokens.back() != "(") {
-                double a = std::stoi(tokens.back());
-                tokens.pop_back();
-                min_val = std::min(min_val, a);
+            double a = stack.top(); stack.pop();
+            double b = stack.top(); stack.pop();
+            stack.push(std::min(a, b));
+        }
+        else if (token == "max") {
+            if (stack.size() < 2) {
+                throw std::runtime_error("Operandos insuficientes para la funcion max");
             }
-            stack.push(min_val);
-        } else if (token == "max") { // Máximo con múltiples argumentos
-            double max_val = std::numeric_limits<int>::min();
-            while (!tokens.empty() && tokens.back() != "(") {
-                double a = std::stoi(tokens.back());
-                tokens.pop_back();
-                max_val = std::max(max_val, a);
-            }
-            stack.push(max_val);
+            double a = stack.top(); stack.pop();
+            double b = stack.top(); stack.pop();
+            stack.push(std::max(a, b));
         } else {
             stack.push(std::stoi(token));
         }
@@ -151,6 +198,14 @@ double evaluate(Tokens& tokens) {
 }
 
 int main() {
+
+    std::cout << "Bienvenido a TinyLisp!" << std::endl;
+    std::cout << "Operaciones matematicas basicas: Suma(+), Resta(-), Multiplicacion(*) y Division(/)"<< std::endl;
+    std::cout << "Operaciones matematicas avanzadas: Modulo(%), Potencia(^) y Valor absoluto(abs)" << std::endl;
+    std::cout << "Operaciones trigonometricas: Seno(sin), Coseno(cos), Tangente(tan), Cotangente(cot), Secante(sec) y Cosecante(csc)" << std::endl;
+    std::cout << "Operaciones logicas: Minimo(min) y Maximo(max)" << std::endl;
+    std::cout << "Para salir, escriba 'exit'" << std::endl;
+
     std::string input;
     while (true){
         std::cout << "->";
